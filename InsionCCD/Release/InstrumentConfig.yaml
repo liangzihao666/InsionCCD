@@ -1,0 +1,363 @@
+instruments:
+  - type: mirror
+    classname: Dummy
+    config: DummyMirror-1
+  - type: mirror
+    classname: Dummy
+    config: DummyMirror-2
+  - type: ccd
+    classname: PricetonCCD
+    config: PricetonCCD-1
+  - type: ccd
+    classname: Dummy
+    config: DummyCCD-1
+  - type: ccd
+    classname: InsionCCD
+    config: InsionCCD-1
+  - type: ccd
+    classname: Dummy
+  - type: camera
+    classname: DummyVision
+    config: DummyVision-1
+  - type: camera
+    classname: Daheng_MER2_VisionCamera
+    config: Daheng_MER2_VisionCamera-1
+  - type: SolarMonochromator
+    classname: SolarMonochromator
+    config: SolarMonochromator-1
+  - type: Motor
+    classname: ZAUX3DMotor
+    config: ZAUX3DMotor-1
+  - type: ArcRamanFilter
+    classname: ArcRamanFilter
+    config: ArcRamanFilter-1
+  - type: ElectricGear
+    classname: IMCElectricGear
+    config: IMCElectricGear-1
+  - type: ElectricGear
+    classname: IMCElectricGear
+    config: IMCElectricGear-2
+  - type: ElectricGear
+    classname: IMCElectricGear
+    config: IMCElectricGear-3
+  - type: Laser
+    classname: Oxxius_LBX_Laser
+    config: Oxxius_LBX-785-150_1
+  - type: Laser
+    classname: Oxxius_LCX_Laser
+    config: Oxxius_LCX-532-100_1
+  - type: YongXinMicroscope
+    classname: YongXinMicroscope
+    config: YongXinMicroscope_1
+  - type: Motor
+    classname: IMCRotationStage
+    config: IMCRotationStage_1
+  - type: ArcRamanCoupler
+    classname: ArcRamanCoupler
+    config: ArcRamanCoupler-1
+ArcRamanCoupler-1:
+  displayname: My ArcRamanCoupler_1
+  mirrors:
+    - classname: MRE2
+      displayname: Filter_MRE2_3
+      isNested: true
+      port: 12
+      baudrate: 256000
+      lastYRealPos: -0.021800000220537186
+      lastXRealPos: -1.0393000238195782e-08
+      maxYRealPos: 1.0
+      maxXRealPos: 1.0
+      minYRealPos: -1.0
+      minXRealPos: -1.0
+    - classname: MRE2
+      displayname: Filter_MRE2_4
+      isNested: true
+      port: 13
+      baudrate: 256000
+      lastYRealPos: -0.02839999832212925
+      lastXRealPos: -0.05480000376701355
+      maxYRealPos: 1.0
+      maxXRealPos: 1.0
+      minYRealPos: -1.0
+      minXRealPos: -1.0
+  status:
+    - status_name: normal
+      mirror_position:
+        - xDispPos: -1.0393000238195782e-08
+          yDispPos: -0.021800000220537186
+        - xDispPos: -0.05480000376701355
+          yDispPos: -0.02839999832212925
+    - status_name: low wavelength
+      mirror_position:
+        - xDispPos: -0.0085000000000000006
+          yDispPos: -0.020799999999999999
+        - xDispPos: -0.052299999999999999
+          yDispPos: -0.0287
+IMCRotationStage_1:
+  displayname: Attenuator
+  isNested: false
+  port: 18
+  baudrate: 115200
+  maxXRealPos: 1000000
+  minXRealPos: -1000000
+  xSpeedMax: 1
+  XAxis: 01
+  accel: 50
+  decel: 62
+  div: 1600
+  pitch: 1
+  homingvel: 2
+  homeoffset: 0
+  AX: 1
+  BX: 0
+  lastXRealPos: 882366
+YongXinMicroscope_1:
+  port: 11
+  baudrate: 115200
+  led1_max_brightness: 500
+  led1_min_brightness: 0
+  led2_max_brightness: 500
+  led2_min_brightness: 0
+  objective_slots:
+    - slot_name: X100
+      slot_index: 1
+    - slot_name: 1
+      slot_index: 2
+    - slot_name: 1
+      slot_index: 3
+    - slot_name: X5
+      slot_index: 4
+    - slot_name: X20
+      slot_index: 5
+    - slot_name: X40
+      slot_index: 6
+  filter_slots:
+    - slot_name: 白光
+      slot_index: 1
+    - slot_name: 测试挡
+      slot_index: 6
+  displayname: 显微镜
+Oxxius_LBX-785-150_1:
+  displayname: Oxxius_LBX-785-150_1
+  serialnum: LAS-11317
+  max_laser_power: 40
+  min_laser_power: 0
+Oxxius_LCX-532-100_1:
+  displayname: Oxxius_LCX-532-100_1
+  serialnum: LAS-11401
+  max_laser_power: 100
+  min_laser_power: 0
+IMCElectricGear-1:
+  displayname: 激发光档位
+  port: 5
+  baudrate: 115200
+  XAxis: 01
+  maxSpeed: 1000
+  status:
+    - status_name: 532nm
+      pos: -67038
+    - status_name: 633nm
+      pos: 982
+    - status_name: 785nm
+      pos: 84006
+IMCElectricGear-2:
+  displayname: 信号光档位
+  port: 19
+  baudrate: 115200
+  XAxis: 01
+  maxSpeed: 1000
+  status:
+    - status_name: normal
+      pos: 69599
+IMCElectricGear-3:
+  displayname: 测试档位
+  port: 23
+  baudrate: 115200
+  XAxis: 01
+  speed: 20
+  maxSpeed: 1000
+  status:
+    - status_name: 测试
+      pos: 69633
+    - status_name: 白光视场
+      pos: 193393
+ArcRamanFilter-1:
+  displayname: My ArcRamanFilter_1
+  motor:
+    classname: FeinixsNanoRotationStage
+    displayname: FeinixsNanoRotationStage_111
+    isNested: true
+    port: 10
+    baudrate: 115200
+    maxXRealPos: 2
+    minXRealPos: -2
+    xSpeedMax: 0.1
+    XAxis: 01
+    accel: 50
+    decel: 62
+    div: 1600
+    pitch: 1
+    homingvel: 2
+    homeoffset: 0
+    AX: 1
+    BX: 0
+    lastXRealPos: -0.50309997797012329
+  mirrors:
+    - classname: MRE2
+      displayname: Filter_MRE2_1
+      isNested: true
+      port: 3
+      baudrate: 256000
+      lastYRealPos: 0.018600050359964371
+      lastXRealPos: -0.065900027751922607
+      maxYRealPos: 1.0
+      maxXRealPos: 1.0
+      minYRealPos: -1.0
+      minXRealPos: -1.0
+    - classname: MRE2
+      displayname: Filter_MRE2_2
+      isNested: true
+      port: 9
+      baudrate: 256000
+      lastYRealPos: -0.03590000793337822
+      lastXRealPos: -0.015200033783912659
+      maxYRealPos: 1.0
+      maxXRealPos: 1.0
+      minYRealPos: -1.0
+      minXRealPos: -1.0
+  status:
+    - status_name: normal_532nm
+      wavelength: 532
+      motorDispPos: -0.50309997797012329
+      motorDispOffset: -0.001
+      mirror_position:
+        - xDispPos: -0.065900027751922607
+          yDispPos: 0.018600050359964371
+        - xDispPos: -0.015200033783912659
+          yDispPos: -0.03590000793337822
+    - status_name: plain
+      wavelength: 532
+      motorDispPos: 0
+      motorDispOffset: -0.001
+      mirror_position:
+        - xDispPos: 0.29999999999999999
+          yDispPos: 0.40000000000000002
+        - xDispPos: 0
+          yDispPos: 0
+    - status_name: low_wavenumber_532nm
+      wavelength: 532
+      motorDispPos: -0.10490000247955322
+      motorDispOffset: -0.001
+      mirror_position:
+        - xDispPos: -0.079300090670585632
+          yDispPos: 0.030900068581104279
+        - xDispPos: -0.033800002187490463
+          yDispPos: -0.071900025010108948
+    - status_name: normal_633nm
+      wavelength: 633
+      motorDispPos: -0.70310002565383911
+      motorDispOffset: -0.001
+      mirror_position:
+        - xDispPos: -0.064699999988079071
+          yDispPos: 0.011800061911344528
+        - xDispPos: -0.013400036841630936
+          yDispPos: -0.036200009286403656
+    - status_name: normal_785nm
+      wavelength: 785
+      motorDispPos: -0.90240001678466797
+      motorDispOffset: -0.001
+      mirror_position:
+        - xDispPos: -0.067000031471252441
+          yDispPos: 0.013200059533119202
+        - xDispPos: -0.013000037521123886
+          yDispPos: -0.036600008606910706
+  lastStatus: 0
+ZAUX3DMotor-1:
+  displayname: 3维扫描位移台
+  port: 8
+  baudrate: 38400
+  lastYRealPos: 55.266300201416016
+  lastXRealPos: 76.361198425292969
+  lastZRealPos: -0.7149999737739563
+  maxYRealPos: 86
+  maxXRealPos: 92
+  maxZRealPos: 50
+  minYRealPos: 26
+  minXRealPos: 32
+  minZRealPos: -50
+  XAxisIndex: 0
+  YAxisIndex: 1
+  ZAxisIndex: 2
+  AX: -1
+  BX: 0
+  AY: -1
+  BY: 0
+  AZ: 1
+  BZ: 0
+DummyMirror-1:
+  displayname: DummyMirror-3
+  lastYRealPos: -0.037735849056603765
+  lastXRealPos: -0.95569620253164556
+  maxYRealPos: 1.0
+  maxXRealPos: 1.0
+  minYRealPos: -1.0
+  minXRealPos: -1.0
+  restoreLastStatus: true
+DummyMirror-2:
+  displayname: DummyMirror-22
+  lastYRealPos: -0.54000000000000004
+  lastXRealPos: -0.27999999999999992
+  maxYRealPos: 1.0
+  maxXRealPos: 1.0
+  minYRealPos: -1.0
+  minXRealPos: -1.0
+  restoreLastStatus: true
+PricetonCCD-1:
+  displayname: Priceton CCD 1
+  PixelSizeInUm: 15
+  restoreLastStatus: true
+  serialnum: X101294023
+  YStart: 92
+  YEnd: 124
+  Reverse: true
+DummyCCD-1:
+  displayname: Dummy CCD 1
+  PixelSizeInUm: 2
+  restoreLastStatus: true
+  YStart: 10
+  YEnd: 52
+  Reverse: false
+InsionCCD-1:
+  displayname: Insion CCD 1
+  PixelSizeInUm: 2
+  restoreLastStatus: true
+  YStart: -2
+  YEnd: -1
+  Reverse: false
+DummyVision-1:
+  displayname: My Vision Camera 1
+  PixelSizeInUm: 2.4
+  WidthInUm: 7411.2
+  HeightInUm: 4953.6
+  YStart: 10
+  YEnd: 20
+  Reverse: false
+Daheng_MER2_VisionCamera-1:
+  displayname: Daheng Camera
+  PixelSizeInUm: 2.4
+  WidthInUm: 7411.2
+  HeightInUm: 4953.6
+  serialnum: FCR24040292
+  YStart: 10
+  YEnd: 20
+  Reverse: false
+SolarMonochromator-1:
+  displayname: Solar Monochromator
+  SlitMaxValues:
+    - 2000.0
+    - 2000.0
+    - 2000.0
+  SlitMinValues:
+    - 0.0
+    - 0.0
+    - 0.0
